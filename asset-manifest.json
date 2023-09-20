@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/date-counter-2/static/css/main.9395cb7b.css",
-    "main.js": "/date-counter-2/static/js/main.87df8e8b.js",
+    "main.js": "/date-counter-2/static/js/main.e9c61e34.js",
     "index.html": "/date-counter-2/index.html",
     "main.9395cb7b.css.map": "/date-counter-2/static/css/main.9395cb7b.css.map",
-    "main.87df8e8b.js.map": "/date-counter-2/static/js/main.87df8e8b.js.map"
+    "main.e9c61e34.js.map": "/date-counter-2/static/js/main.e9c61e34.js.map"
   },
   "entrypoints": [
     "static/css/main.9395cb7b.css",
-    "static/js/main.87df8e8b.js"
+    "static/js/main.e9c61e34.js"
   ]
 }
