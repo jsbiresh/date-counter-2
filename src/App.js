@@ -27,6 +27,11 @@ function Counter() {
     setCount((currCount) => Number(currCount + step))
   }
 
+  function handleDecreaseStep() {
+    setCount(0)
+    setStep(1)
+  }
+
   return (
     <div className="App">
       <div>
@@ -38,18 +43,19 @@ function Counter() {
           onChange={(e) => setStep(e.target.value)}
           style={{ margin: '2.5rem 1rem 1rem auto', color: 'pink' }}
         />
-        {/* <button onClick={handleDecreaseStep}> - </button> */}
         <span>Step: {step}</span>
-        {/* <button onClick={handleIncreaseStep}> + </button> */}
       </div>
       <div>
         <button onClick={handleDecreaseCount}> - </button>
-        <span>Count: {count}</span>
+        {/* <span>Count: {count}</span> */}
+        <input
+          type="text"
+          value={count}
+          onChange={(e) => setCount(Number(e.target.value))}
+        />
         <button onClick={handleIncreaseCount}> + </button>
       </div>
-      <div>
-        <button className="resetButton"> Reset </button>
-      </div>
+
       <div>
         {count === 0
           ? 'Today is '
@@ -58,6 +64,15 @@ function Counter() {
           : `${Math.abs(count)} days ago was `}
         <span>{date.toDateString()}</span>
       </div>
+      {count !== 0 || step !== 1 ? (
+        <div>
+          <button className="resetButton" onClick={() => handleDecreaseStep()}>
+            Reset
+          </button>
+        </div>
+      ) : (
+        ''
+      )}
     </div>
   )
 }
